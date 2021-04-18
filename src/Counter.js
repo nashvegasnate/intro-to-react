@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-export default function Counter({ appName, counterValue }) {
-  const [counter, setCounter] = useState(counterValue);
+export default function Counter({ appName, initialValue }) {
+  const [counter, setCounter] = useState(initialValue);
   const [userInput, setUserInput] = useState(0);
   const [counterName, setCounterName] = useState(appName);
 

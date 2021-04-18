@@ -2,11 +2,31 @@ import './App.css';
 import Counter from './Counter';
 
 const App = () => {
+
+  const array = [
+    {
+      appName: "Counter 1",
+      initialValue: 200
+    },
+    {
+      appName: "Counter B",
+      initialValue: 0
+    },
+    {
+      appName: "Counter Three",
+      initialValue: 100
+    },
+    {
+      appName: "Counter Four",
+      initialValue: 100
+    }
+  ];
+
   return (
     <>
-      <Counter appName="Counter 1" counterValue={200}/>
-      <Counter appName="Counter 2" counterValue={200}/>
-      <Counter appName="Counter 3" counterValue={200}/>
+    {/* key={i} is the iterator which allows react to keep track of each object in the array. You'll see in the react console. */}
+    { array.map((counter, i) => <Counter key={i} appName={counter.appName}initialValue={counter.initialValue}/>)
+    }  
     </>
   )
 }
