@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <>
-    {/* key={i} is the iterator which allows react to keep track of each object in the array. You'll see in the react console. */}
+    {/* the second argument key={i} is the iterator which allows react to keep track of each object in the array. You'll see in the react console. */}
     { array.map((counter, i) => <Counter key={i} appName={counter.appName}initialValue={counter.initialValue}/>)
     }  
     </>

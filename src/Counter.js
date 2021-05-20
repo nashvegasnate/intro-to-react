@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// initialValue below sets the Counter state back to its initial value
 export default function Counter({ appName, initialValue }) {
   const [counter, setCounter] = useState(initialValue);
   const [userInput, setUserInput] = useState(0);
@@ -25,6 +26,7 @@ export default function Counter({ appName, initialValue }) {
       </button>
       <hr></hr>
 
+{/* This portion makes the decrement button disappear if the value tries to go past zero  */}
       {counter <= 0 ? '' : 
         <button onClick={() => setCounter((prevState) => prevState - userInput)}
         >Decrement by {userInput}
